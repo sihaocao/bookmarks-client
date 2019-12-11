@@ -29,7 +29,7 @@ class AddBookmark extends Component {
       title: title.value,
       url: url.value,
       description: description.value,
-      rating: rating.value,
+      rating: parseInt(rating.value),
     }
     this.setState({ error: null })
     fetch(`${config.API_ENDPOINT}/api/bookmarks`, {
